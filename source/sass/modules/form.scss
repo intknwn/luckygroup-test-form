@@ -1,0 +1,220 @@
+.form {
+  display: flex;
+  flex-direction: column;
+
+  box-sizing: border-box;
+
+  max-width: 320px;
+
+  margin-left: -5px;
+  padding: 53px 0;
+}
+
+.form label {
+  margin-bottom: 10px;
+
+  font-weight: 800;
+  font-size: 12px;
+  line-height: 16px;
+
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.form label > span {
+  color: $green1;
+}
+
+.form input,
+.form select {
+  box-sizing: border-box;
+
+  height: 50px;
+
+  padding: 16px 20px;
+
+  color: $black;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 18px;
+
+  background: #F8F8F8;
+  border: 1px solid $grey2;
+  border-radius: 5px;
+
+  &:focus {
+    padding: 15px 19px;
+
+    border: 2px solid $green1;
+    outline: none;
+  }
+
+  &::placeholder {
+    opacity: 0.2;
+  }
+}
+
+.form select {
+  background-image: url("../img/flag-rus@2x.png");
+  background-size: 27px 18px;
+  background-repeat: no-repeat;
+  background-position: 50px 16px;
+  background-origin: border-box;
+
+  &::-ms-expand {
+    display: none;
+  }
+}
+
+.form button[type="submit"] {
+  margin: 0;
+  padding: 12px 20px;
+
+  min-height: 42px;
+
+  color: #FFFFFF;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 18px;
+
+  text-align: center;
+
+  background-color: $green1;
+  border: none;
+  border-radius: 5px;
+
+  &:hover,
+  &:focus {
+    outline: none;
+
+    cursor: pointer;
+    opacity: 0.8;
+  }
+}
+
+.form button[type="submit"] > span {
+  position: relative;
+  display: inline-block;
+
+  margin-left: -25px;
+
+  &::before {
+    content: url("../img/icon-arrow-right.svg");
+
+    display: block;
+    position: absolute;
+
+    top: 50%;
+    right: -25px;
+
+    width: 18px;
+    height: 12px;
+
+    transform: translateY(-50%);
+  }
+}
+
+.form__input-wrapper {
+  display: flex;
+
+  margin-bottom: 38px;
+}
+
+.form__input {
+  &--name {
+    margin-bottom: 20px;
+  }
+
+
+  &--phone {
+    width: 100%;
+
+    margin-right: 20px;
+  }
+
+  &--country {
+    min-width: 116px;
+
+    appearance: none;
+  }
+}
+
+.form__select-wrapper {
+  position: relative;
+
+  margin-left: auto;
+
+  &::before {
+    content: "";
+
+    position: absolute;
+    top: 23px;
+    right: 18px;
+
+    display: block;
+
+    width: 11px;
+    height: 6px;
+
+    background-image: url("../img/icon-arrow-down.svg");
+    background-repeat: no-repeat;
+    background-position:  center;
+  }
+}
+
+@media (max-width: $tablet-width) {
+  .form {
+    width: 100%;
+    max-width: 100%;
+
+    margin-left: 0;
+    padding: 52px 127px 60px ;
+  }
+}
+
+@media (max-width: $mobile-width) {
+  .form {
+    padding: 30px 20px 27px ;
+  }
+
+  .form input,
+  .form select {
+    padding: 16px 10px;
+
+    &:focus {
+      padding: 15px 9px;
+    }
+  }
+
+  .form select {
+    background-position: 42px 15px;
+  }
+
+  .form__input {  
+    &--country {
+      min-width: 96px;
+    }
+
+    &--phone {
+      margin-right: 10px;
+    }
+  }
+
+  .form__input-wrapper {
+    margin-bottom: 28px;
+  }
+
+  .form__select-wrapper {
+    &::before {
+      top: 21px;
+
+      right: 8px;
+    }
+  }
+
+  .form button[type="submit"] > span {
+    &::before {
+      transform: translateY(-70%);
+    }
+  }
+}

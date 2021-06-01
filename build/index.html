@@ -19,6 +19,57 @@
   <link rel="preload" href="fonts/montserrat-v15-latin_cyrillic-800.woff" as="font" type="font/woff" crossorigin="anonymous">
 </head>
 
-<body></body>
+<body>
+  <h1 class="visually-hidden">Reduslim</h1>
+  <div class="container">
+    <section class="order">
+      <h2 class="visually-hidden">Форма заказа Reduslim</h2>
+      <div class="order__image-wrapper">
+        <div class="order__tags-wrapper">
+          <p>Reduslim</p>
+          <p>ECO</p>
+        </div>
+        <picture>
+          <source type="image/webp" media="(max-width: 767px)" srcset="img/reduslim-mobile@1x.webp 1x, img/reduslim-mobile@2x.webp 2x">
+          <source type="image/webp" srcset="img/reduslim@1x.webp 1x, img/reduslim@2x.webp 2x">
+          <source media="(max-width: 767px)" srcset="img/reduslim-mobile@1x.png 1x, img/reduslim-mobile@2x.png 2x">
+          <img class="order__image" src="img/reduslim@1x.png" srcset="img/reduslim@2x.png 2x" width="465" height="255" alt="Средство для похудения «Reduslim»">
+        </picture>
+      </div>
+      <div class="order__form-wrapper">
+        <div class="order__call-wrapper">
+          <p class="order__call">Сделай шаг <span class="order__call-nowrap">к выздоровлению</span></p>
+        </div>
+        <form class="form order__form" action="#">
+          <label for="name">Ваше <span>имя</span></label>
+          <input class="form__input form__input--name" type="text" name="name" id="name" placeholder="Алексей" required="">
+
+          <label for="phone">Ваш <span>телефон</span></label>
+          <label class="visually-hidden" for="country">Ваша <span>страна</span></label>
+          <div class="form__input-wrapper">
+            <input class="form__input form__input--phone" type="tel" name="phone" id="phone" placeholder="+7 (123) 456 78-90" required="">
+
+            <div class="form__select-wrapper">
+              <select class="form__input form__input--country" name="country" id="country">
+                <option value="Russia">RU</option>
+                <option value="Indonesia">ID</option>
+              </select>
+            </div>
+          </div>
+
+          <button type="submit"><span>Заказать</span></button>
+        </form>
+        <div class="order__secure">
+          <span>Trusted</span>
+          <img src="img/icon-lock.svg" width="12" height="15" alt="Secure">
+          <span>Secure</span>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <script src="js/imask.js"></script>
+  <script src="js/script.js"></script>
+</body>
 
 </html>

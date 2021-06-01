@@ -1,0 +1,14 @@
+.container {
+  box-sizing: border-box;
+
+  max-width: $content-width;
+
+  margin: 0 auto;
+  padding: 75px 80px;
+}
+
+@media (max-width: $mobile-width) {
+  .container {
+    padding: 60px 0;
+  }
+}
